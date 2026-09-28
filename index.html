@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Johann Schumacher — UI/UX-Design und Frontend-Entwicklung</title><meta name="description" content="UI/UX-Designer und Frontend-Entwickler aus Radebeul bei Dresden. Vom ersten Sketch bis zum ausgelieferten Code."><link rel="canonical" href="https://www.johannschumacher.de/"><link rel="alternate" hreflang="de" href="https://www.johannschumacher.de/"><link rel="alternate" hreflang="en" href="https://www.johannschumacher.de/en/"><link rel="alternate" hreflang="x-default" href="https://www.johannschumacher.de/"><meta property="og:type" content="website"><meta property="og:title" content="Johann Schumacher — UI/UX-Design und Frontend-Entwicklung"><meta property="og:description" content="UI/UX-Designer und Frontend-Entwickler aus Radebeul bei Dresden. Vom ersten Sketch bis zum ausgelieferten Code."><meta property="og:url" content="https://www.johannschumacher.de/"><meta property="og:locale" content="de_DE"><meta property="og:site_name" content="Johann Schumacher"><meta name="theme-color" content="#fdfcfa" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/img/icon.png" type="image/png"><link rel="sitemap" href="/sitemap-index.xml"><script>
+  // Runs before first paint. Applies the stored choice and flags JS availability.
+  // `is:inline` is essential: bundled, this would run after first paint and
+  // produce exactly the flash of the wrong theme it exists to prevent.
+  try {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {
+    /* storage blocked — system preference applies, which is a correct fallback */
+  }
+  document.documentElement.classList.add('js');
+</script><link rel="stylesheet" href="/_astro/global.DzrIRnPD.css"></head><body><a class="skip-link" href="#main">Zum Inhalt springen</a><header class="site-header"><div class="wrap"><a class="site-header__name" href="/">Johann Schumacher</a><div class="site-header__meta"><nav class="main-nav" aria-label="Hauptnavigation"><ul><li><a href="/" aria-current="page">Start</a></li><li><a href="/ueber-mich/">Über mich</a></li></ul></nav><nav class="lang-switcher" aria-label="Sprache / Language"><ul><li><span aria-current="true" lang="de">Deutsch</span></li><li><a href="/en/" lang="en" hreflang="en">English</a></li></ul></nav><div class="theme-switcher" role="group" aria-label="Farbschema"><button type="button" data-set-theme="system" aria-pressed="true">System</button><button type="button" data-set-theme="light" aria-pressed="false">Hell</button><button type="button" data-set-theme="dark" aria-pressed="false">Dunkel</button></div><script>
+  (function () {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll('[data-set-theme]');
+
+    function read() {
+      try {
+        const v = localStorage.getItem('theme');
+        return v === 'light' || v === 'dark' ? v : 'system';
+      } catch (e) {
+        return 'system';
+      }
+    }
+
+    function render(value) {
+      if (value === 'system') {
+        delete root.dataset.theme;
+      } else {
+        root.dataset.theme = value;
+      }
+      buttons.forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.setTheme === value));
+      });
+    }
+
+    buttons.forEach((b) => {
+      b.addEventListener('click', () => {
+        const value = b.dataset.setTheme;
+        try {
+          if (value === 'system') localStorage.removeItem('theme');
+          else localStorage.setItem('theme', value);
+        } catch (e) {
+          /* choice applies for this page view only */
+        }
+        render(value);
+      });
+    });
+
+    render(read());
+  })();
+</script></div></div></header><main id="main"><div class="wrap stack"><section class="hero prose stack"><h1>Johann Schumacher</h1><p class="lead">Ich bin UI/UX-Designer und Frontend-Entwickler aus Radebeul bei Dresden und begleite Projekte vom ersten Sketch bis zum ausgelieferten Code. Mich interessieren Interfaces für ungewöhnliche Kontexte, Code, der in fünf Jahren noch lesbar ist, und Plattencover aus den Siebzigern. Hauptberuflich entwickle ich bei GTV Software für Museen, Ausstellungen und Industrie. Daneben arbeite ich freiberuflich an Web- und App-Projekten und habe derzeit Kapazität für neue Anfragen.</p><p><a href="/ueber-mich/">Mehr über mich</a></p></section></div></main><footer class="site-footer"><div class="wrap"><nav aria-label="Fußzeile"><ul><li><a href="/">Start</a></li><li><a href="/ueber-mich/">Über mich</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li><li><a href="mailto:info@johannschumacher.de">info@johannschumacher.de</a></li></ul></nav><p>© 2026 Johann Schumacher</p></div></footer></body></html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Über mich — Johann Schumacher</title><meta name="description" content="Lebenslauf, Stationen und Auszeichnungen von Johann Schumacher."><link rel="canonical" href="https://www.johannschumacher.de/ueber-mich/"><link rel="alternate" hreflang="de" href="https://www.johannschumacher.de/ueber-mich/"><link rel="alternate" hreflang="en" href="https://www.johannschumacher.de/en/about/"><link rel="alternate" hreflang="x-default" href="https://www.johannschumacher.de/ueber-mich/"><meta property="og:type" content="website"><meta property="og:title" content="Über mich — Johann Schumacher"><meta property="og:description" content="Lebenslauf, Stationen und Auszeichnungen von Johann Schumacher."><meta property="og:url" content="https://www.johannschumacher.de/ueber-mich/"><meta property="og:locale" content="de_DE"><meta property="og:site_name" content="Johann Schumacher"><meta name="theme-color" content="#fdfcfa" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/img/icon.png" type="image/png"><link rel="sitemap" href="/sitemap-index.xml"><script>
+  // Runs before first paint. Applies the stored choice and flags JS availability.
+  // `is:inline` is essential: bundled, this would run after first paint and
+  // produce exactly the flash of the wrong theme it exists to prevent.
+  try {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {
+    /* storage blocked — system preference applies, which is a correct fallback */
+  }
+  document.documentElement.classList.add('js');
+</script><link rel="stylesheet" href="/_astro/global.DzrIRnPD.css"></head><body><a class="skip-link" href="#main">Zum Inhalt springen</a><header class="site-header"><div class="wrap"><a class="site-header__name" href="/">Johann Schumacher</a><div class="site-header__meta"><nav class="main-nav" aria-label="Hauptnavigation"><ul><li><a href="/">Start</a></li><li><a href="/ueber-mich/" aria-current="page">Über mich</a></li></ul></nav><nav class="lang-switcher" aria-label="Sprache / Language"><ul><li><span aria-current="true" lang="de">Deutsch</span></li><li><a href="/en/about/" lang="en" hreflang="en">English</a></li></ul></nav><div class="theme-switcher" role="group" aria-label="Farbschema"><button type="button" data-set-theme="system" aria-pressed="true">System</button><button type="button" data-set-theme="light" aria-pressed="false">Hell</button><button type="button" data-set-theme="dark" aria-pressed="false">Dunkel</button></div><script>
+  (function () {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll('[data-set-theme]');
+
+    function read() {
+      try {
+        const v = localStorage.getItem('theme');
+        return v === 'light' || v === 'dark' ? v : 'system';
+      } catch (e) {
+        return 'system';
+      }
+    }
+
+    function render(value) {
+      if (value === 'system') {
+        delete root.dataset.theme;
+      } else {
+        root.dataset.theme = value;
+      }
+      buttons.forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.setTheme === value));
+      });
+    }
+
+    buttons.forEach((b) => {
+      b.addEventListener('click', () => {
+        const value = b.dataset.setTheme;
+        try {
+          if (value === 'system') localStorage.removeItem('theme');
+          else localStorage.setItem('theme', value);
+        } catch (e) {
+          /* choice applies for this page view only */
+        }
+        render(value);
+      });
+    });
+
+    render(read());
+  })();
+</script></div></div></header><main id="main"><div class="wrap stack"><h1>Über mich</h1><section class="cv-section"><h2>Erfahrung</h2><ol class="cv-list"><li><p class="cv-period"><time>seit 2020</time></p><h3>Frontend-Entwickler und Interaktionsdesigner</h3><p class="cv-org">GTV – Gesellschaft für Technische Visualistik mbH</p><p class="prose">Mitarbeit an verschiedenen Projekten und Umsetzung von innovativen Softwarelösungen für Museen, Ausstellungen und Industrie.</p></li><li><p class="cv-period"><time>seit 2015</time></p><h3>Freelancer</h3><p class="cv-org">Johann Schumacher Design</p><p class="prose">Print- und Webdesign sowie Entwurf und Umsetzung von webbasierten Anwendungen und mobilen Apps.</p></li><li><p class="cv-period"><time>2017–2018</time></p><h3>Wissenschaftliche Hilfskraft</h3><p class="cv-org">Technische Universität Dresden</p><p class="prose">Lehrstuhl für Mediengestaltung, Fakultät Informatik. Gestaltung und Umsetzung der Veranstaltung „OUTPUT“ sowie Mitarbeit am Projekt „INTUSI“ – dem Steuerungskonzept für Baumaschinen der Firma Liebherr.</p></li></ol></section><section class="cv-section"><h2>Bildung</h2><ol class="cv-list"><li><p class="cv-period"><time>2016–2020</time></p><h3>Master of Science</h3><p class="cv-org">Medieninformatik, Technische Universität Dresden</p><p class="prose">Konzeption und Umsetzung von Medienstationen für die Ausstellung „Veronese: Der Cuccina-Zyklus“ in der Gemäldegalerie Alte Meister. Abschlussarbeit: Konzeption eines Unterstützungssystems für den Entwicklungsprozess einer Medienstation im Ausstellungskontext.</p></li><li><p class="cv-period"><time>2012–2016</time></p><h3>Bachelor of Science</h3><p class="cv-org">Medieninformatik, Technische Universität Dresden</p><p class="prose">Abschlussarbeit: Entwurf eines Interfaces zur Steuerung eines Mähdrescherschwarms mittels Multitouch-Table.</p></li></ol></section><section class="cv-section"><h2>Auszeichnungen</h2><ol class="cv-list"><li><p class="cv-period"><time>2019</time></p><h3>UX Design Award, Bauma Innovation Award</h3><p class="cv-org">INTUSI / Liebherr</p><p class="prose">Indirekte Auszeichnungen durch die Mitarbeit am Projekt „INTUSI“.</p></li><li><p class="cv-period"><time>2017</time></p><h3>GIL Young Talent Award</h3><p class="cv-org">Gesellschaft für Informatik in der Land-, Forst- und Ernährungswirtschaft e. V.</p><p class="prose">Beste Bachelorarbeit im Bereich der Informatik in der Landwirtschaft.</p></li><li><p class="cv-period"><time>2013</time></p><h3>Hauptpreis Fotografie</h3><p class="cv-org">Visionale Leipzig</p><p class="prose">Preis für eine Fotoserie.</p></li></ol></section><section class="cv-section"><h2>Fähigkeiten</h2><h3>Entwicklung</h3><ul class="tag-list"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>TypeScript</li><li>Angular</li><li>React</li><li>Node.js</li><li>Astro</li><li>Swift</li></ul><h3>Gestaltung</h3><ul class="tag-list"><li>Figma</li><li>Adobe Creative Suite</li><li>Sketch</li></ul><h3>Sprachen</h3><ul class="tag-list"><li>Deutsch — Muttersprache</li><li>Englisch — Fließend</li><li>Französisch — Grundlagen</li></ul></section></div></main><footer class="site-footer"><div class="wrap"><nav aria-label="Fußzeile"><ul><li><a href="/">Start</a></li><li><a href="/ueber-mich/">Über mich</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li><li><a href="mailto:info@johannschumacher.de">info@johannschumacher.de</a></li></ul></nav><p>© 2026 Johann Schumacher</p></div></footer></body></html>

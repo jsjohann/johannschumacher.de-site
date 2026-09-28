@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Privacy Policy — Johann Schumacher</title><meta name="description" content="Information on the processing of personal data under Art. 13 GDPR."><link rel="canonical" href="https://www.johannschumacher.de/en/privacy/"><link rel="alternate" hreflang="de" href="https://www.johannschumacher.de/datenschutz/"><link rel="alternate" hreflang="en" href="https://www.johannschumacher.de/en/privacy/"><link rel="alternate" hreflang="x-default" href="https://www.johannschumacher.de/datenschutz/"><meta property="og:type" content="website"><meta property="og:title" content="Privacy Policy — Johann Schumacher"><meta property="og:description" content="Information on the processing of personal data under Art. 13 GDPR."><meta property="og:url" content="https://www.johannschumacher.de/en/privacy/"><meta property="og:locale" content="en_GB"><meta property="og:site_name" content="Johann Schumacher"><meta name="theme-color" content="#fdfcfa" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/img/icon.png" type="image/png"><link rel="sitemap" href="/sitemap-index.xml"><script>
+  // Runs before first paint. Applies the stored choice and flags JS availability.
+  // `is:inline` is essential: bundled, this would run after first paint and
+  // produce exactly the flash of the wrong theme it exists to prevent.
+  try {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {
+    /* storage blocked — system preference applies, which is a correct fallback */
+  }
+  document.documentElement.classList.add('js');
+</script><link rel="stylesheet" href="/_astro/global.DzrIRnPD.css"></head><body><a class="skip-link" href="#main">Skip to content</a><header class="site-header"><div class="wrap"><a class="site-header__name" href="/en/">Johann Schumacher</a><div class="site-header__meta"><nav class="main-nav" aria-label="Main navigation"><ul><li><a href="/en/">Home</a></li><li><a href="/en/about/">About</a></li></ul></nav><nav class="lang-switcher" aria-label="Sprache / Language"><ul><li><a href="/datenschutz/" lang="de" hreflang="de">Deutsch</a></li><li><span aria-current="true" lang="en">English</span></li></ul></nav><div class="theme-switcher" role="group" aria-label="Color scheme"><button type="button" data-set-theme="system" aria-pressed="true">System</button><button type="button" data-set-theme="light" aria-pressed="false">Light</button><button type="button" data-set-theme="dark" aria-pressed="false">Dark</button></div><script>
+  (function () {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll('[data-set-theme]');
+
+    function read() {
+      try {
+        const v = localStorage.getItem('theme');
+        return v === 'light' || v === 'dark' ? v : 'system';
+      } catch (e) {
+        return 'system';
+      }
+    }
+
+    function render(value) {
+      if (value === 'system') {
+        delete root.dataset.theme;
+      } else {
+        root.dataset.theme = value;
+      }
+      buttons.forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.setTheme === value));
+      });
+    }
+
+    buttons.forEach((b) => {
+      b.addEventListener('click', () => {
+        const value = b.dataset.setTheme;
+        try {
+          if (value === 'system') localStorage.removeItem('theme');
+          else localStorage.setItem('theme', value);
+        } catch (e) {
+          /* choice applies for this page view only */
+        }
+        render(value);
+      });
+    });
+
+    render(read());
+  })();
+</script></div></div></header><main id="main"><div class="wrap stack"><h1>Privacy Policy</h1><p class="prose">This is a convenience translation. The<a href="/datenschutz/">German version</a> is the legally binding one.</p><section class="prose stack"><h2>1. Controller</h2><p>Johann Schumacher, Sidonienstr. 4, 01445 Radebeul, Germany. Email: <a href="mailto:info@johannschumacher.de">info@johannschumacher.de</a>, phone: <a href="tel:+4915206019199">+49 152 06 01 91 99</a>.</p><h2>2. Hosting and server log files</h2><p>This site is served as a static website via GitHub Pages, a service of GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA (a subsidiary of Microsoft Corporation). When you open a page, GitHub processes technically necessary connection data, in particular IP address, time of the request, the file requested, volume of data transferred, referrer and user agent. The legal basis is Art. 6(1)(f) GDPR; the legitimate interest is the secure and reliable operation of the site. I do not combine this data with any other source.</p><p>Processing may involve a transfer to the United States. GitHub is certified under the EU-U.S. Data Privacy Framework; processing is governed by the GitHub Data Protection Agreement including standard contractual clauses.</p><p><mark>TODO: obtain the actual server log retention period from the host and state it here — do not guess. Likewise confirm the data processing agreement with GitHub and add the date.</mark></p><h2>3. Contact by email</h2><p>If you email me, I process your details solely to handle your enquiry and any follow-up questions. The legal basis is Art. 6(1)(b) GDPR for contract-related enquiries and Art. 6(1)(f) GDPR otherwise. I delete messages once the matter is concluded and no statutory retention period applies.</p><p><mark>TODO: name the email provider and set a retention period for enquiries.</mark></p><h2>4. No tracking, no cookies, no third parties</h2><p>This site sets no cookies, embeds nothing from other servers and uses no analytics or tracking services. Fonts and images load only from this domain, so no IP address is transmitted to a third party when a page is opened. No cookie banner is therefore required.</p><p>The colour scheme switcher stores your choice in your browser's<code>localStorage</code>. That entry is strictly necessary for a function you requested yourself, contains no personal data, is never transmitted, and can be cleared at any time through your browser settings.</p><h2>5. Your rights</h2><p>You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18), data portability (Art. 20) and the right to object to processing based on Art. 6(1)(f) GDPR (Art. 21). An informal message to the address above is sufficient.</p><p>You also have the right to lodge a complaint with a supervisory authority. The competent authority is the Saxon Data Protection Commissioner (Sächsischer Datenschutzbeauftragter), Devrientstraße 5, 01067 Dresden, Germany.</p><h2>6. Last updated</h2><p><mark>TODO: add the date of the last update once the open items are resolved.</mark></p></section></div></main><footer class="site-footer"><div class="wrap"><nav aria-label="Footer"><ul><li><a href="/en/">Home</a></li><li><a href="/en/about/">About</a></li><li><a href="/en/imprint/">Imprint</a></li><li><a href="/en/privacy/">Privacy</a></li><li><a href="mailto:info@johannschumacher.de">info@johannschumacher.de</a></li></ul></nav><p>© 2026 Johann Schumacher</p></div></footer></body></html>

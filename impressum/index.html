@@ -1,0 +1,54 @@
+<!DOCTYPE html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Impressum — Johann Schumacher</title><meta name="description" content="Impressum und Anbieterkennzeichnung nach § 5 DDG."><link rel="canonical" href="https://www.johannschumacher.de/impressum/"><link rel="alternate" hreflang="de" href="https://www.johannschumacher.de/impressum/"><link rel="alternate" hreflang="en" href="https://www.johannschumacher.de/en/imprint/"><link rel="alternate" hreflang="x-default" href="https://www.johannschumacher.de/impressum/"><meta property="og:type" content="website"><meta property="og:title" content="Impressum — Johann Schumacher"><meta property="og:description" content="Impressum und Anbieterkennzeichnung nach § 5 DDG."><meta property="og:url" content="https://www.johannschumacher.de/impressum/"><meta property="og:locale" content="de_DE"><meta property="og:site_name" content="Johann Schumacher"><meta name="theme-color" content="#fdfcfa" media="(prefers-color-scheme: light)"><meta name="theme-color" content="#14130f" media="(prefers-color-scheme: dark)"><link rel="icon" href="/favicon.ico" sizes="32x32"><link rel="icon" href="/img/icon.png" type="image/png"><link rel="sitemap" href="/sitemap-index.xml"><script>
+  // Runs before first paint. Applies the stored choice and flags JS availability.
+  // `is:inline` is essential: bundled, this would run after first paint and
+  // produce exactly the flash of the wrong theme it exists to prevent.
+  try {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'light' || stored === 'dark') {
+      document.documentElement.dataset.theme = stored;
+    }
+  } catch (e) {
+    /* storage blocked — system preference applies, which is a correct fallback */
+  }
+  document.documentElement.classList.add('js');
+</script><link rel="stylesheet" href="/_astro/global.DzrIRnPD.css"></head><body><a class="skip-link" href="#main">Zum Inhalt springen</a><header class="site-header"><div class="wrap"><a class="site-header__name" href="/">Johann Schumacher</a><div class="site-header__meta"><nav class="main-nav" aria-label="Hauptnavigation"><ul><li><a href="/">Start</a></li><li><a href="/ueber-mich/">Über mich</a></li></ul></nav><nav class="lang-switcher" aria-label="Sprache / Language"><ul><li><span aria-current="true" lang="de">Deutsch</span></li><li><a href="/en/imprint/" lang="en" hreflang="en">English</a></li></ul></nav><div class="theme-switcher" role="group" aria-label="Farbschema"><button type="button" data-set-theme="system" aria-pressed="true">System</button><button type="button" data-set-theme="light" aria-pressed="false">Hell</button><button type="button" data-set-theme="dark" aria-pressed="false">Dunkel</button></div><script>
+  (function () {
+    const root = document.documentElement;
+    const buttons = document.querySelectorAll('[data-set-theme]');
+
+    function read() {
+      try {
+        const v = localStorage.getItem('theme');
+        return v === 'light' || v === 'dark' ? v : 'system';
+      } catch (e) {
+        return 'system';
+      }
+    }
+
+    function render(value) {
+      if (value === 'system') {
+        delete root.dataset.theme;
+      } else {
+        root.dataset.theme = value;
+      }
+      buttons.forEach((b) => {
+        b.setAttribute('aria-pressed', String(b.dataset.setTheme === value));
+      });
+    }
+
+    buttons.forEach((b) => {
+      b.addEventListener('click', () => {
+        const value = b.dataset.setTheme;
+        try {
+          if (value === 'system') localStorage.removeItem('theme');
+          else localStorage.setItem('theme', value);
+        } catch (e) {
+          /* choice applies for this page view only */
+        }
+        render(value);
+      });
+    });
+
+    render(read());
+  })();
+</script></div></div></header><main id="main"><div class="wrap stack"><h1>Impressum</h1><dl class="detail-list"><dt>Angaben gemäß § 5 DDG</dt><dd>Johann Schumacher<br>Sidonienstr. 4<br>01445 Radebeul<br>Deutschland</dd><dt>Kontakt</dt><dd>Telefon: <a href="tel:+4915206019199">+49 152 06 01 91 99</a><br>E-Mail: <a href="mailto:info@johannschumacher.de">info@johannschumacher.de</a></dd><dt>Umsatzsteuer-Identifikationsnummer</dt><dd><mark>TODO: USt-IdNr. gemäß § 27a UStG ergänzen oder diesen Abschnitt entfernen</mark></dd></dl><section class="prose stack"><h2>Verbraucherstreitbeilegung</h2><p>Die Plattform der Europäischen Kommission zur Online-Streitbeilegung (OS) wurde zum 20. Juli 2025 eingestellt. Ich bin nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p><h2>Haftung für Inhalte und Links</h2><p>Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Für die Inhalte externer Links sind ausschließlich deren Betreiber verantwortlich. Zum Zeitpunkt der Verlinkung waren keine rechtswidrigen Inhalte erkennbar. Bei Bekanntwerden von Rechtsverletzungen entferne ich entsprechende Links umgehend.</p><h2>Urheberrecht</h2><p>Die auf dieser Website erstellten Inhalte und Werke unterliegen dem deutschen Urheberrecht. Beiträge Dritter sind als solche gekennzeichnet.</p></section></div></main><footer class="site-footer"><div class="wrap"><nav aria-label="Fußzeile"><ul><li><a href="/">Start</a></li><li><a href="/ueber-mich/">Über mich</a></li><li><a href="/impressum/">Impressum</a></li><li><a href="/datenschutz/">Datenschutz</a></li><li><a href="mailto:info@johannschumacher.de">info@johannschumacher.de</a></li></ul></nav><p>© 2026 Johann Schumacher</p></div></footer></body></html>
