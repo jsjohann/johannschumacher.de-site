@@ -1,0 +1,1 @@
+var e=e=>[...e].reverse().join(``);document.querySelectorAll(`a[data-email]`).forEach(t=>{let{u:n=``,d:r=``,subject:i,reveal:a}=t.dataset,o=`${e(n)}@${e(r)}`;t.href=`mailto:${o}${i?`?subject=${encodeURIComponent(i)}`:``}`,a!==void 0&&(t.textContent=o)});

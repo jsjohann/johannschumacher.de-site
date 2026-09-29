@@ -1,4 +1,21 @@
+# Search engines and everyone else: welcome.
 User-agent: *
 Allow: /
+
+# AI training crawlers: please do not use this site as training data. This is a
+# request that well-behaved crawlers honour; it cannot be enforced on GitHub Pages.
+# Opting out of Google-Extended and Applebot-Extended does not affect search ranking.
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: CCBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: omgili
+Disallow: /
 
 Sitemap: https://www.johannschumacher.de/sitemap-index.xml
